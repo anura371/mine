@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Simple Website</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 50px;
-    }
-    h1 {
-      color: #4CAF50;
-    }
-    a {
-      color: #008CBA;
-      text-decoration: none;
-    }
-  </style>
+  <title>index</title>
 </head>
 <body>
-  <h1>Welcome to My Website</h1>
-  <p>This is a basic HTML page.</p>
-  <a href="https://google.com" target="_blank">Go to Google</a>
+  <h2>Login Page</h2>
+  <input type="text" id="username" placeholder="Username"><br><br>
+  <input type="password" id="password" placeholder="Password"><br><br>
+  <button onclick="login()">Login</button>
+
+  <script>
+    function login() {
+      const u = document.getElementById("username").value;
+      const p = document.getElementById("password").value;
+
+      // Fake hardcoded login
+      if (u === "admin" && p === "1234") {
+        alert("Login successful!");
+        window.location.href = "https://docs.google.com/spreadsheets/d/1ABNODH_MPb6wvBGgQbSLyCxy_XGrSCuyqO4NOl_zokw/edit?gid=0#gid=0"; // or any page you want
+      } else {
+        alert("Invalid credentials");
+      }
+    }
+  </script>
 </body>
 </html>
